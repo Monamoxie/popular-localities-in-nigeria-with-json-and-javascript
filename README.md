@@ -1,4 +1,4 @@
-# A List of Popular Localities in Nigeria with JSON and Javascript
+# A List of Popular Localities in Nigeria with JSON and JQuery Library
 
 Sometimes it's easier getting all the states and local governments in Nigeria. Why? Because it's an information that is easily accessible and available online. 
 
