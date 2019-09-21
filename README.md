@@ -21,3 +21,49 @@ It's very simple. You can choose to use any language to query the data.
 **With JQuery**
 
 ```<script scr="/link-to-jquery-cdn-or-a-local-copy"></script>```
+
+Add this to your Javascript file or simply path to file
+
+```
+var  loader = {
+
+    urlPath: 'states-and-localities.json',
+
+    loadStates() {
+        let states = '';
+        $.getJSON(this.urlPath).done(function(states){  
+            $.each(states, function(index, element) {   
+                states = states[index]["state"]["name"];
+            }) ;
+            console.log(states);
+        });    
+    }, 
+
+    loadLocalitiesFor(state) {
+        $.getJSON(this.urlPath).done(function(states_data){  
+            $.each(states_data, function(index, element) {
+                if (states_data[index]["state"]["name"] === state)
+                {
+                    let localities = '';  
+                    $.each(states_data[index]["state"]["locals"], function(i, lga) {
+                        localities += '<option value="'+lga["name"]+'">'+lga["name"] + '</option>';
+                    });  
+                    console.log(localities);    
+                }   
+            });
+        });  
+    }, 
+}
+```
+
+**To Load all states, call **
+```
+loader.loadStates();
+```
+
+
+**To Load all localities in a state, call**
+```
+loader.loadLocalitiesFor("Lagos state");
+```
+
