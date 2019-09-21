@@ -58,7 +58,7 @@ var  loader = {
 }
 ```
 
-**To Load all states, call **
+**To Load all states, call**
 ```js
 loader.loadStates();
 ```
