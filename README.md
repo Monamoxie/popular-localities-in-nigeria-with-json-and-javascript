@@ -29,7 +29,7 @@ Add this to your Javascript file or simply path to file
 ```js
 var  loader = {
 
-    urlPath: 'states-and-localities.json',
+    urlPath: 'json/states-and-localities.json',
 
     loadStates() {
         let states = '';
