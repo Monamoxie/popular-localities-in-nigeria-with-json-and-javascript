@@ -20,11 +20,13 @@ It's very simple. You can choose to use any language to query the data.
 
 **With JQuery**
 
-```<script scr="/link-to-jquery-cdn-or-a-local-copy"></script>```
+```html 
+    <script scr="/link-to-jquery-cdn-or-a-local-copy"></script>
+```
 
 Add this to your Javascript file or simply path to file
 
-```
+```js
 var  loader = {
 
     urlPath: 'states-and-localities.json',
@@ -57,13 +59,13 @@ var  loader = {
 ```
 
 **To Load all states, call **
-```
+```js
 loader.loadStates();
 ```
 
 
 **To Load all localities in a state, call**
-```
+```js
 loader.loadLocalitiesFor("Lagos state");
 ```
 
